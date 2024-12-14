@@ -11,6 +11,7 @@ export const schema: GadgetModel = {
     fields: [
       "customCollection",
       "position",
+      "product",
       "shop",
       "shopifyCreatedAt",
       "shopifyUpdatedAt",
