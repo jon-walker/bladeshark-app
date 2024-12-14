@@ -9,6 +9,7 @@ export const schema: GadgetModel = {
   fields: {},
   shopify: {
     fields: [
+      "orderLineItem",
       "quantity",
       "refund",
       "restockType",
