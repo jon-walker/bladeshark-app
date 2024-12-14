@@ -12,6 +12,13 @@ export const permissions: GadgetPermissions = {
     "shopify-app-users": {
       storageKey: "Role-Shopify-App",
       models: {
+        contact: {
+          read: true,
+          actions: {
+            create: true,
+            update: true,
+          },
+        },
         shopifyCart: {
           read: {
             filter: "accessControl/filters/shopify/shopifyCart.gelly",
@@ -46,18 +53,6 @@ export const permissions: GadgetPermissions = {
             update: true,
           },
         },
-        shopifyFulfillment: {
-          read: {
-            filter:
-              "accessControl/filters/shopify/shopifyFulfillment.gelly",
-          },
-        },
-        shopifyFulfillmentEvent: {
-          read: {
-            filter:
-              "accessControl/filters/shopify/shopifyFulfillmentEvent.gelly",
-          },
-        },
         shopifyGdprRequest: {
           read: {
             filter:
@@ -78,6 +73,18 @@ export const permissions: GadgetPermissions = {
           read: {
             filter:
               "accessControl/filters/shopify/shopifyOrderAdjustment.gelly",
+          },
+        },
+        shopifyOrderLineItem: {
+          read: {
+            filter:
+              "accessControl/filters/shopify/shopifyOrderLineItem.gelly",
+          },
+        },
+        shopifyProduct: {
+          read: {
+            filter:
+              "accessControl/filters/shopify/shopifyProduct.gelly",
           },
         },
         shopifyRefund: {
