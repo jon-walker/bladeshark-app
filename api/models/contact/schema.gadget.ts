@@ -10,7 +10,7 @@ export const schema: GadgetModel = {
     email: { type: "email", storageKey: "AbR0IgGm2Y1K" },
     firstName: { type: "string", storageKey: "k_uz0OuPB2l6" },
     lastName: { type: "string", storageKey: "WrfAB4VeKAu1" },
-    partners: {
+    partnerOrganizations: {
       type: "hasOne",
       child: { model: "partner", belongsToField: "contact" },
       storageKey: "oC3Ii5lGmB15",
