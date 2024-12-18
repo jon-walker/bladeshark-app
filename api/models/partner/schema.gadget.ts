@@ -7,16 +7,30 @@ export const schema: GadgetModel = {
   type: "gadget/model-schema/v1",
   storageKey: "aIlDb77fM3bH",
   fields: {
-    commissionPlan: {
+    attributionProducts: {
       type: "belongsTo",
-      parent: { model: "commissionPlan" },
-      storageKey: "s5GJayk2sztU",
+      parent: { model: "shopifyProduct" },
+      storageKey: "LnY1LOXnLwNv",
+    },
+    commissionRules: {
+      type: "hasMany",
+      children: {
+        model: "commissionRule",
+        belongsToField: "partner",
+      },
+      storageKey: "WEPvY7pyxfsZ",
     },
     contact: {
       type: "belongsTo",
       parent: { model: "contact" },
       storageKey: "h5q1_cBNTazh",
     },
+    linkedPartnerParent: {
+      type: "belongsTo",
+      parent: { model: "commissionRule" },
+      storageKey: "dPrEBog08OhL",
+    },
+    organization: { type: "string", storageKey: "1NDVscRymb23" },
     paymentEmail: { type: "email", storageKey: "PQOaGHNv2Ry9" },
     payments: {
       type: "hasMany",

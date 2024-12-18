@@ -13,11 +13,20 @@ export const schema: GadgetModel = {
       validations: { required: true },
       storageKey: "8ZRtIUyHy0h_",
     },
-    defaultCommissionPlan: {
-      type: "belongsTo",
-      validations: { required: true },
-      parent: { model: "commissionPlan" },
-      storageKey: "kduEaDqYw-Dg",
+    commissionType: {
+      type: "enum",
+      default: "percentage",
+      acceptMultipleSelections: false,
+      acceptUnlistedOptions: false,
+      options: ["flat", "percentage"],
+      storageKey: "9UkSMecrQUhN",
+    },
+    defaultCommissionRate: {
+      type: "number",
+      default: 15,
+      decimals: 2,
+      validations: { numberRange: { min: 0, max: 40 } },
+      storageKey: "fMtzJf29bcEg",
     },
     name: { type: "string", storageKey: "ZcgvwYfffb0V" },
     partners: {
