@@ -11,11 +11,55 @@ export const permissions: GadgetPermissions = {
   roles: {
     "shopify-app-users": {
       storageKey: "Role-Shopify-App",
+      default: {
+        read: true,
+        action: true,
+      },
       models: {
+        commission: {
+          read: true,
+          actions: {
+            create: true,
+            delete: true,
+            update: true,
+          },
+        },
+        commissionRule: {
+          read: true,
+          actions: {
+            create: true,
+            delete: true,
+            update: true,
+          },
+        },
         contact: {
           read: true,
           actions: {
             create: true,
+            update: true,
+          },
+        },
+        partner: {
+          read: true,
+          actions: {
+            create: true,
+            delete: true,
+            update: true,
+          },
+        },
+        payment: {
+          read: true,
+          actions: {
+            create: true,
+            delete: true,
+            update: true,
+          },
+        },
+        program: {
+          read: true,
+          actions: {
+            create: true,
+            delete: true,
             update: true,
           },
         },
@@ -128,6 +172,9 @@ export const permissions: GadgetPermissions = {
     },
     unauthenticated: {
       storageKey: "unauthenticated",
+    },
+    Partner: {
+      storageKey: "9dCKzpTb29hp",
     },
   },
 };
