@@ -31,11 +31,6 @@ export const schema: GadgetModel = {
       },
       storageKey: "-r3LeseTThRR",
     },
-    name: {
-      type: "string",
-      validations: { required: true },
-      storageKey: "ULtUyqnkcMes",
-    },
     partner: {
       type: "belongsTo",
       parent: { model: "partner" },
@@ -44,7 +39,7 @@ export const schema: GadgetModel = {
     rate: {
       type: "number",
       default: 15,
-      decimals: 1,
+      decimals: 2,
       validations: {
         required: true,
         numberRange: { min: 1, max: 100 },
@@ -53,9 +48,11 @@ export const schema: GadgetModel = {
     },
     trigger: {
       type: "enum",
+      default: "products",
       acceptMultipleSelections: false,
       acceptUnlistedOptions: false,
-      options: ["products"],
+      options: ["products", "commissions"],
+      validations: { required: true },
       storageKey: "xe1Bn2lAVXgY",
     },
     type: {
