@@ -11,12 +11,14 @@ import {
   AutoHiddenInput
 } from "@gadgetinc/react/auto/polaris";
 import { api } from "../api";
+import { useNavigate } from 'react-router-dom';
 
 import { PartnerInitialInputs } from "../components/PartnerInitialInputs";
 import { PartnerContactInputs } from '../components/PartnerContactInputs';
 import { PartnerCommissionInputs } from '../components/PartnerCommissionInputs';
 
 export default function NewPartner() {
+	const navigate = useNavigate();
   const [section, setSection ] = useState("initial"); // initial, contact, commission
   const [partnerId, setPartnerId] = useState(null);
 
@@ -36,7 +38,7 @@ export default function NewPartner() {
       title="Add New BLADESHARK Partner"
       backAction={{
         content: "Shop Information",
-        onAction: () => navigate("/"),
+        onAction: () => navigate("/partner-manage"),
       }}
     >
       <Layout>

@@ -1,47 +1,19 @@
 import { AutoTable } from "@gadgetinc/react/auto/polaris";
 import {
-  Banner,
   BlockStack,
   Box,
   Card,
   Layout,
   Link,
   Page,
-  Text,
+  Text
 } from "@shopify/polaris";
 import { api } from "../api";
 
 export default function Index() {
   return (
-    <Page title="App">
+    <Page title="BLADESHARK Partners App">
       <Layout>
-        <Layout.Section>
-          <Banner tone="success">
-            <Text variant="bodyMd" as="p">
-              Successfully connected your Gadget app to Shopify
-            </Text>
-          </Banner>
-        </Layout.Section>
-        <Layout.Section>
-          <Card>
-            <img
-              className="gadgetLogo"
-              src="https://assets.gadget.dev/assets/icon.svg"
-            />
-            <BlockStack gap="200">
-              <Text variant="headingMd" as="h1" alignment="center">
-                Edit this page:{" "}
-                <Link
-                  url={`/edit/development/files/web/routes/_index.jsx`}
-                  target="_blank"
-                  removeUnderline
-                >
-                  web/routes/_index.jsx
-                </Link>
-              </Text>
-            </BlockStack>
-          </Card>
-        </Layout.Section>
         <Layout.Section>
           <Card padding="0">
             {/* use Autocomponents to build UI quickly: https://docs.gadget.dev/guides/frontend/autocomponents  */}
