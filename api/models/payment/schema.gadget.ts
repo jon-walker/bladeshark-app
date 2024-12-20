@@ -13,6 +13,11 @@ export const schema: GadgetModel = {
       decimals: 2,
       storageKey: "Y7YiJKqfWLfr",
     },
+    commissions: {
+      type: "hasMany",
+      children: { model: "commission", belongsToField: "payment" },
+      storageKey: "JHZnCW1zqRC0",
+    },
     partner: {
       type: "belongsTo",
       parent: { model: "partner" },
