@@ -13,7 +13,7 @@ export const schema: GadgetModel = {
     partnerOrganization: {
       type: "hasOne",
       child: { model: "partner", belongsToField: "contact" },
-      storageKey: "oC3Ii5lGmB15",
+      storageKey: "fIuLCWSbuJ7G",
     },
     phone: {
       type: "string",
