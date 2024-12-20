@@ -23,7 +23,7 @@ export const schema: GadgetModel = {
     contact: {
       type: "belongsTo",
       parent: { model: "contact" },
-      storageKey: "h5q1_cBNTazh",
+      storageKey: "7JtDRiZLsTyR",
     },
     linkedPartnerParent: {
       type: "belongsTo",
@@ -41,6 +41,14 @@ export const schema: GadgetModel = {
       type: "belongsTo",
       parent: { model: "program" },
       storageKey: "Hb0Tjdg3rWh4",
+    },
+    status: {
+      type: "enum",
+      default: "active",
+      acceptMultipleSelections: false,
+      acceptUnlistedOptions: false,
+      options: ["active", "locked", "inactive"],
+      storageKey: "0qEe5H4aFqcZ",
     },
   },
 };
